@@ -146,7 +146,7 @@ ul li:not(li:last-child) {
 
 /* line 70, ../sass/main.scss */
 .quote {
-  font-size: 1.8em;
+  font-size: 1.5em;
   margin-top: 1.4em;
   font-family: 'Montserrat', sans-serif;
 }
@@ -284,17 +284,18 @@ header {
   padding: 45px 100px 15px;
   box-sizing: border-box;
   text-align: center;
+  font-size: 1.8em;
 }
-/* line 171, ../sass/main.scss */
+/* line 172, ../sass/main.scss */
 .why .grid .cell {
   font-size: 0.95em;
 }
 
-/* line 176, ../sass/main.scss */
+/* line 177, ../sass/main.scss */
 .how {
   padding: 80px 0 160px;
 }
-/* line 179, ../sass/main.scss */
+/* line 180, ../sass/main.scss */
 .how .grid {
   text-align: center;
 }
