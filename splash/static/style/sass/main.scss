@@ -83,6 +83,10 @@ header {
   height: 400px;
   width: 100%;
   background-color: $primary;
+
+  .quote {
+    max-width: 600px;
+  }
 }
 
 .main-content {
