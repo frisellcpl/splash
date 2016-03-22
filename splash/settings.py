@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'splash.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'project',
-        'USER': 'project',
-        'PASSWORD': 'DcXPZNZlMLjyCUWby9NjtAp8uQ4MRND3',
+        'NAME': 'lol',
+        'USER': 'lol',
+        'PASSWORD': 'lol',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
