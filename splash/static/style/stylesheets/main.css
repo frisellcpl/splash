@@ -235,7 +235,7 @@ header {
 }
 /* line 120, ../sass/main.scss */
 .what .block:not(:last-child) {
-  margin-bottom: 160px;
+  margin-bottom: 120px;
 }
 /* line 124, ../sass/main.scss */
 .what .block .image {
