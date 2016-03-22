@@ -1,0 +1,5 @@
+Django
+django-compressor
+gunicorn
+ipython
+psycopg2

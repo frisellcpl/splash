@@ -1,0 +1,182 @@
+@import "jeet/jeet";
+@import "reset";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+$primary: #595299;
+$secondary: #9A92E5;
+$text: #4c4c4c;
+
+body {
+  color: $text;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: 3.4em;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+h3 {
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+h4 {
+  letter-spacing: 0.06em;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+h5 {
+  text-transform: capitalize;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+
+ul {
+  margin: 30px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+  list-style-position: inside;
+
+  li:not(li:last-child) {
+    padding-bottom: 15px;
+  }
+}
+
+.list {
+  margin: 30px 0;
+
+  .divider {
+    font-style: italic;
+  }
+}
+
+.caption {
+  color: #FFF;
+  @include j-align(both);
+  text-align: center;
+}
+
+.quote {
+  font-size: 1.8em;
+  margin-top: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  letter-spacing: 0.01em;
+  margin-bottom: 0.6em;
+}
+
+header {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-color: $primary;
+}
+
+.main-content {
+  @include j-center($max_width: 1920px, $pad: 0);
+}
+
+.container {
+  @include j-center($max_width: 960px, $pad: 30px);
+}
+
+.grid {
+  .cell {
+    @include j-column(1/2, $cycle: 2, $gutter: 8);
+    margin-top: 80px;
+  }
+
+  i {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+.what {
+  padding: 160px 0;
+
+  .block {
+    display: table;
+
+    &:not(:last-child){
+      margin-bottom: 160px;
+    }
+
+    .image {
+      display: table-cell;
+      vertical-align: middle;
+      box-sizing: border-box;
+      padding-right: 30px;
+      font-size: 0.95em;
+      width: 60%;
+
+      &.right {
+        padding: 10px 0 0 60px;
+      }
+    }
+
+    .text {
+      width: 40%;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+}
+
+.editor pre code {
+  color: $text;
+  background: #FFF;
+  border: 2px solid #EEE;
+  border-radius: 3px;
+  padding: 30px;
+}
+
+.why {
+  width: 100%;
+  background-color: $primary;
+  color: #FFF;
+  padding: 20px 0 100px;
+
+  .quote {
+    padding: 45px 100px 15px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .grid .cell {
+    font-size: 0.95em;
+  }
+}
+
+.how {
+  padding: 80px 0 160px;
+
+  .grid {
+    text-align: center;
+  }
+}

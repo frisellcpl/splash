@@ -1,0 +1,300 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+/* line 1, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 22, ../sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 26, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 29, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 32, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 35, ../sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 40, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 45, ../sass/_reset.scss */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* line 53, ../sass/_reset.scss */
+html,
+body {
+  height: 100%;
+}
+
+/* line 10, ../sass/main.scss */
+body {
+  color: #4c4c4c;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+}
+
+/* line 17, ../sass/main.scss */
+h1 {
+  font-size: 3.4em;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+/* line 23, ../sass/main.scss */
+h3 {
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+/* line 31, ../sass/main.scss */
+h4 {
+  letter-spacing: 0.06em;
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* line 38, ../sass/main.scss */
+h5 {
+  text-transform: capitalize;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+
+/* line 45, ../sass/main.scss */
+ul {
+  margin: 30px 0;
+  padding-left: 20px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+/* line 51, ../sass/main.scss */
+ul li:not(li:last-child) {
+  padding-bottom: 15px;
+}
+
+/* line 56, ../sass/main.scss */
+.list {
+  margin: 30px 0;
+}
+/* line 59, ../sass/main.scss */
+.list .divider {
+  font-style: italic;
+}
+
+/* line 64, ../sass/main.scss */
+.caption {
+  color: #FFF;
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* line 70, ../sass/main.scss */
+.quote {
+  font-size: 1.8em;
+  margin-top: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 76, ../sass/main.scss */
+p {
+  letter-spacing: 0.01em;
+  margin-bottom: 0.6em;
+}
+
+/* line 81, ../sass/main.scss */
+header {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-color: #595299;
+}
+
+/* line 88, ../sass/main.scss */
+.main-content {
+  width: auto;
+  max-width: 1920px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 92, ../sass/main.scss */
+.container {
+  width: auto;
+  max-width: 960px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* line 97, ../sass/main.scss */
+.grid .cell {
+  float: left;
+  clear: none;
+  width: 46%;
+  margin-left: 0;
+  margin-right: 8%;
+  margin-top: 80px;
+}
+/* line 36, ../sass/jeet/_grid.scss */
+.grid .cell:nth-of-type(n) {
+  margin-right: 8%;
+  float: left;
+  clear: none;
+}
+/* line 42, ../sass/jeet/_grid.scss */
+.grid .cell:nth-of-type(2n) {
+  margin-right: 0;
+  float: right;
+}
+/* line 47, ../sass/jeet/_grid.scss */
+.grid .cell:nth-of-type(2n + 1) {
+  clear: both;
+}
+/* line 102, ../sass/main.scss */
+.grid i {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+/* line 107, ../sass/main.scss */
+.grid:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/* line 114, ../sass/main.scss */
+.what {
+  padding: 160px 0;
+}
+/* line 117, ../sass/main.scss */
+.what .block {
+  display: table;
+}
+/* line 120, ../sass/main.scss */
+.what .block:not(:last-child) {
+  margin-bottom: 160px;
+}
+/* line 124, ../sass/main.scss */
+.what .block .image {
+  display: table-cell;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding-right: 30px;
+  font-size: 0.95em;
+  width: 60%;
+}
+/* line 132, ../sass/main.scss */
+.what .block .image.right {
+  padding: 10px 0 0 60px;
+}
+/* line 137, ../sass/main.scss */
+.what .block .text {
+  width: 40%;
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 143, ../sass/main.scss */
+.what .block:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* line 151, ../sass/main.scss */
+.editor pre code {
+  color: #4c4c4c;
+  background: #FFF;
+  border: 2px solid #EEE;
+  border-radius: 3px;
+  padding: 30px;
+}
+
+/* line 159, ../sass/main.scss */
+.why {
+  width: 100%;
+  background-color: #595299;
+  color: #FFF;
+  padding: 20px 0 100px;
+}
+/* line 165, ../sass/main.scss */
+.why .quote {
+  padding: 45px 100px 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+/* line 171, ../sass/main.scss */
+.why .grid .cell {
+  font-size: 0.95em;
+}
+
+/* line 176, ../sass/main.scss */
+.how {
+  padding: 80px 0 160px;
+}
+/* line 179, ../sass/main.scss */
+.how .grid {
+  text-align: center;
+}

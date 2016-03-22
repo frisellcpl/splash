@@ -1,0 +1,12 @@
+*.py[cod]
+.DS_Store
+
+.sass-cache
+.module-cache
+
+local_settings.py
+db.sqlite3
+
+/env
+/media
+/static
