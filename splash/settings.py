@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'splash',
     'compressor',
+    'tinymce',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -128,6 +129,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,paste",
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+}
 
 # Load local settings
 try:
