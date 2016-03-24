@@ -17,7 +17,7 @@
         {% endif %}
         <div class="image {% if forloop.counter|divisibleby:2 %}right{% endif %}">
         {% if block.block.image %}
-            <img src="{{ block.image.url }}" />
+            <img src="{{ block.block.image.url }}" />
         {% elif block.block.code %}
             <div class="highlight">
                 <div class="editor">
