@@ -1,117 +1,77 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
+{% block title %}{{ page.title }}{% endblock %}
+{% block h1 %}{{ page.title }}{% endblock %}
+{% block tagline %}{{ page.tagline }}{% endblock %}
+
 {% block body %}
 <section class="what container">
-    <div class="block monitoring">
-        <div class="image">
-            <img src="{% static 'images/monitoring.png' %}" />
-        </div>
-        <div class="text">
-            <h3>Service monitoring</h3>
-            <p>Tentacle gives you full insight of your service uptime status and performance from all over the globe. We support a number of protocols including but not limited to: </p>
-            <ul>
-                <li>HTTP</li>
-                <li>WebSocket</li>
-                <li>TCP/IP</li>
-                <li>UDP</li>
-                <li>FTP</li>
-                <li>LDAP</li>
-                <li>SMTP</li>
-                <li>Your custom protocol</li>
-            </ul>
-            <p>Get an alert by email, sms or a custom webhook when your service is not performing as you expect it to. Your service is business critical. Make sure it’s healthy and stable -  all the time - from everywhere.</p>
-        </div>
-    </div>
+    {% for block in page.image_blocks.all %}
     <div class="block">
+        {% if forloop.counter|divisibleby:2 %}
         <div class="text">
-            <h3>Dynamic</h3>
-            <div class="list">
-                <p>Easily create standardized tests by using our predefined templates. Enter a handful of settings to get a globally distributed service monitoring up and running in matter of seconds.</p>
-                <p class="divider">or</p>
-                <p>Write code in our hosted JavaScript environment to create tailor made tests for your unique requirements. </p>
-            </div>
+            <h3>{{ block.title }}</h3>
+            {{ block.body|safe }}
         </div>
-        <div class="image right">
+        {% endif %}
+        <div class="image {% if forloop.counter|divisibleby:2 %}right{% endif %}">
+        {% if block.image %}
+            <img src="{{ block.image.url }}" />
+        {% elif block.code %}
             <div class="highlight">
                 <div class="editor">
-                        <pre><code class="javascript">http.get('http://...').then(function(r) {
-    var url = JSON.parse(r.body).url;
-    return http.get(url);
-}).then(function(r) {
-    task.ok('everything works.');
-});</code></pre>
+                    <pre><code class="javascript">{{ block.code }}</code></pre>
                 </div>
             </div>
+        {% endif %}
         </div>
+        {% if not forloop.counter|divisibleby:2 %}
+        <div class="text">
+            <h3>{{ block.title }}</h3>
+            {{ block.body|safe }}
+        </div>
+        {% endif %}
     </div>
+    {% endfor %}
 </section>
 <section class="why">
     <div class="grid container">
+        {% for block in page.simple_blocks.all|slice:"0:2" %}
         <div class="cell">
-            <h4>Tailored tests</h4>
+            <h4>{{ block.title }}</h4>
             <p class="text">
-                While still being easy, Tentacle provides a more dynamic approach to service monitoring. By providing a hosted JavaScript environment you can create service monitoring tests tailored for your needs.  Need help? We have a large amount of already created recipes and also offer consulting in our platform.
+                {{ block.body }}
             </p>
         </div>
-        <div class="cell">
-            <h4>Be proactive</h4>
-            <p class="text">
-                Let Tentacle keep an eye on your whole service platform. Giving you the possibility to be proactive. Alerting on decreased performance in one of your nodes or a certain transaction in your process allows you to  act before the end user suffers from bad usability or even loss of data.
-            </p>
-        </div>
+        {% endfor %}
     </div>
     <div class="container">
         <p class="quote">
-            "Create tailored tests for your service in our hosted JavaScript environment."
+            {{ page.quote }}
         </p>
     </div>
     <div class="grid container">
-        <div class="cell">
-            <h4>Identify root cause</h4>
-            <p class="text">
-                Quickly identify the root cause of your decreased service performance and act fast. Let Tentacle monitor all aspects of your service. When an error occurrs we point you in the right direction from start. Minimizing the time needed for error tracing and decreases the down time of your service.
-            </p>
-        </div>
-        <div class="cell">
-            <h4>Easy to get started</h4>
-            <p class="text">
-                Your service is business critical and thats why service monitoring is so important. But in order to get it up an running it has to be easy. With Tentacle the barrier of entry is almost non-existent. Creating your first test takes no more then a couple of seconds.
-            </p>
-        </div>
+    {% for block in page.simple_blocks.all|slice:"2:4" %}
+    <div class="cell">
+        <h4>{{ block.title }}</h4>
+        <p class="text">
+            {{ block.body }}
+        </p>
     </div>
+    {% endfor %}
 </section>
 <section class="how container">
     <div class="grid">
+        {% for block in page.icon_blocks.all %}
         <div class="cell">
-            <i class="fa fa-globe"></i>
-            <h4>Distributed</h4>
+            <i class="fa {{ block.icon }}"></i>
+            <h4>{{ block.title }}</h4>
             <p class="text">
-                We have distributed Tentacle all over the world for you. This not only make Tentacle very reliable but also gives you the possibility to monitor your services from different locations around the world. How well does your service perform for your North American users?
+                {{ block.body }}
             </p>
         </div>
-        <div class="cell">
-            <i class="fa fa-github"></i>
-            <h4>Open source</h4>
-            <p class="text">
-                We believe in transparency and freedom. That is why  we have made core parts of Tentacle open source and we continue to add even more to the list. Want to contribute or just get a deeper understanding of Tentacle? Head over to our repo on Github and start exploring!
-            </p>
-        </div>
-        <div class="cell">
-            <i class="fa fa-diamond"></i>
-            <h4>Fault tolerant</h4>
-            <p class="text">
-                Fault tolerance is the number one priority for a service monitoring tool. Tentacle has a very solid system architecture and geographical distribution which guarantees that our service is up running ready to test yours, no matter what.
-            </p>
-        </div>
-        <div class="cell">
-            <i class="fa fa-money"></i>
-            <h4>Cost efficient</h4>
-            <p class="text">
-                The markets most powerful and dynamic service monitoring tool doesnt need to be expensive. The way we have streamlined Tentacle makes it powerful and dynamic while keeping the prices down.
-            </p>
-        </div>
-
+        {% endfor %}
     </div>
 </section>
 {% endblock %}

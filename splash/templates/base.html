@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-        <title>Tentacle</title>
+        <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{% static 'style/stylesheets/main.css' %}" type="text/css" media="screen">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/color-brewer.min.css">
@@ -16,8 +16,8 @@
     <body>
         <header>
             <div class="caption">
-                <h1>TENTACLE</h1>
-                <p class="quote">Be the first to know when your service is down, slow or broken.</p>
+                <h1>{% block h1 %}{% endblock %}</h1>
+                <p class="quote">{% block tagline %}{% endblock %}</p>
             </div>
         </header>
         <section class="main-content">

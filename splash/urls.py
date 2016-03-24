@@ -8,9 +8,10 @@ from splash import views
 
 
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
     url(r'^admin/', admin.site.urls),
     url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^$', views.home, name='home'),
+    url(r'^(?P<slug>[\w-]+)/$', views.home, name='home'),
 ]
 
 

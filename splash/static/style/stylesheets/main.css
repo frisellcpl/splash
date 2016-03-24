@@ -85,9 +85,10 @@ h1 {
   font-size: 3.4em;
   font-weight: 600;
   letter-spacing: 5px;
+  text-transform: uppercase;
 }
 
-/* line 23, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 h3 {
   text-transform: capitalize;
   font-weight: 600;
@@ -96,7 +97,7 @@ h3 {
   margin-bottom: 1em;
 }
 
-/* line 31, ../sass/main.scss */
+/* line 32, ../sass/main.scss */
 h4 {
   letter-spacing: 0.06em;
   font-size: 1.4em;
@@ -104,7 +105,7 @@ h4 {
   margin-bottom: 15px;
 }
 
-/* line 38, ../sass/main.scss */
+/* line 39, ../sass/main.scss */
 h5 {
   text-transform: capitalize;
   margin-bottom: 0.2em;
@@ -112,28 +113,28 @@ h5 {
   font-weight: 600;
 }
 
-/* line 45, ../sass/main.scss */
+/* line 46, ../sass/main.scss */
 ul {
   margin: 30px 0;
   padding-left: 20px;
   list-style-type: disc;
   list-style-position: inside;
 }
-/* line 51, ../sass/main.scss */
+/* line 52, ../sass/main.scss */
 ul li:not(li:last-child) {
   padding-bottom: 15px;
 }
 
-/* line 56, ../sass/main.scss */
+/* line 57, ../sass/main.scss */
 .list {
   margin: 30px 0;
 }
-/* line 59, ../sass/main.scss */
+/* line 60, ../sass/main.scss */
 .list .divider {
   font-style: italic;
 }
 
-/* line 64, ../sass/main.scss */
+/* line 65, ../sass/main.scss */
 .caption {
   color: #FFF;
   position: absolute;
@@ -144,32 +145,32 @@ ul li:not(li:last-child) {
   text-align: center;
 }
 
-/* line 70, ../sass/main.scss */
+/* line 71, ../sass/main.scss */
 .quote {
   font-size: 1.5em;
   margin-top: 1.4em;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* line 76, ../sass/main.scss */
+/* line 77, ../sass/main.scss */
 p {
   letter-spacing: 0.01em;
   margin-bottom: 0.6em;
 }
 
-/* line 81, ../sass/main.scss */
+/* line 82, ../sass/main.scss */
 header {
   position: relative;
   height: 400px;
   width: 100%;
   background-color: #595299;
 }
-/* line 87, ../sass/main.scss */
+/* line 88, ../sass/main.scss */
 header .quote {
   max-width: 600px;
 }
 
-/* line 92, ../sass/main.scss */
+/* line 93, ../sass/main.scss */
 .main-content {
   width: auto;
   max-width: 1920px;
@@ -181,7 +182,7 @@ header .quote {
   padding-right: 0;
 }
 
-/* line 96, ../sass/main.scss */
+/* line 97, ../sass/main.scss */
 .container {
   width: auto;
   max-width: 960px;
@@ -193,7 +194,7 @@ header .quote {
   padding-right: 30px;
 }
 
-/* line 101, ../sass/main.scss */
+/* line 102, ../sass/main.scss */
 .grid .cell {
   float: left;
   clear: none;
@@ -217,31 +218,31 @@ header .quote {
 .grid .cell:nth-of-type(2n + 1) {
   clear: both;
 }
-/* line 106, ../sass/main.scss */
+/* line 107, ../sass/main.scss */
 .grid i {
   font-size: 2em;
   margin-bottom: 15px;
 }
-/* line 111, ../sass/main.scss */
+/* line 112, ../sass/main.scss */
 .grid:after {
   clear: both;
   content: "";
   display: block;
 }
 
-/* line 118, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 .what {
   padding: 160px 0;
 }
-/* line 121, ../sass/main.scss */
+/* line 122, ../sass/main.scss */
 .what .block {
   display: table;
 }
-/* line 124, ../sass/main.scss */
+/* line 125, ../sass/main.scss */
 .what .block:not(:last-child) {
   margin-bottom: 120px;
 }
-/* line 128, ../sass/main.scss */
+/* line 129, ../sass/main.scss */
 .what .block .image {
   display: table-cell;
   vertical-align: middle;
@@ -250,24 +251,24 @@ header .quote {
   font-size: 0.95em;
   width: 60%;
 }
-/* line 136, ../sass/main.scss */
+/* line 137, ../sass/main.scss */
 .what .block .image.right {
   padding: 10px 0 0 60px;
 }
-/* line 141, ../sass/main.scss */
+/* line 142, ../sass/main.scss */
 .what .block .text {
   width: 40%;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 147, ../sass/main.scss */
+/* line 148, ../sass/main.scss */
 .what .block:after {
   display: block;
   content: "";
   clear: both;
 }
 
-/* line 155, ../sass/main.scss */
+/* line 156, ../sass/main.scss */
 .editor pre code {
   color: #4c4c4c;
   background: #FFF;
@@ -276,30 +277,30 @@ header .quote {
   padding: 30px;
 }
 
-/* line 163, ../sass/main.scss */
+/* line 164, ../sass/main.scss */
 .why {
   width: 100%;
   background-color: #595299;
   color: #FFF;
   padding: 20px 0 100px;
 }
-/* line 169, ../sass/main.scss */
+/* line 170, ../sass/main.scss */
 .why .quote {
   padding: 45px 100px 15px;
   box-sizing: border-box;
   text-align: center;
   font-size: 1.8em;
 }
-/* line 176, ../sass/main.scss */
+/* line 177, ../sass/main.scss */
 .why .grid .cell {
   font-size: 0.95em;
 }
 
-/* line 181, ../sass/main.scss */
+/* line 182, ../sass/main.scss */
 .how {
   padding: 80px 0 160px;
 }
-/* line 184, ../sass/main.scss */
+/* line 185, ../sass/main.scss */
 .how .grid {
   text-align: center;
 }
