@@ -7,29 +7,29 @@
 
 {% block body %}
 <section class="what container">
-    {% for block in page.image_blocks.all %}
+    {% for block in image_blocks.all %}
     <div class="block">
         {% if forloop.counter|divisibleby:2 %}
         <div class="text">
-            <h3>{{ block.title }}</h3>
-            {{ block.body|safe }}
+            <h3>{{ block.block.title }}</h3>
+            {{ block.block.body|safe }}
         </div>
         {% endif %}
         <div class="image {% if forloop.counter|divisibleby:2 %}right{% endif %}">
-        {% if block.image %}
+        {% if block.block.image %}
             <img src="{{ block.image.url }}" />
-        {% elif block.code %}
+        {% elif block.block.code %}
             <div class="highlight">
                 <div class="editor">
-                    <pre><code class="javascript">{{ block.code }}</code></pre>
+                    <pre><code class="javascript">{{ block.block.code }}</code></pre>
                 </div>
             </div>
         {% endif %}
         </div>
         {% if not forloop.counter|divisibleby:2 %}
         <div class="text">
-            <h3>{{ block.title }}</h3>
-            {{ block.body|safe }}
+            <h3>{{ block.block.title }}</h3>
+            {{ block.block.body|safe }}
         </div>
         {% endif %}
     </div>
@@ -37,11 +37,11 @@
 </section>
 <section class="why">
     <div class="grid container">
-        {% for block in page.simple_blocks.all|slice:"0:2" %}
+        {% for block in simple_blocks.all|slice:"0:2" %}
         <div class="cell">
-            <h4>{{ block.title }}</h4>
+            <h4>{{ block.block.title }}</h4>
             <p class="text">
-                {{ block.body }}
+                {{ block.block.body }}
             </p>
         </div>
         {% endfor %}
@@ -52,23 +52,23 @@
         </p>
     </div>
     <div class="grid container">
-    {% for block in page.simple_blocks.all|slice:"2:4" %}
+     {% for block in simple_blocks.all|slice:"2:4" %}
     <div class="cell">
-        <h4>{{ block.title }}</h4>
+        <h4>{{ block.block.title }}</h4>
         <p class="text">
-            {{ block.body }}
+            {{ block.block.body }}
         </p>
     </div>
     {% endfor %}
 </section>
 <section class="how container">
     <div class="grid">
-        {% for block in page.icon_blocks.all %}
+        {% for block in icon_blocks.all %}
         <div class="cell">
-            <i class="fa {{ block.icon }}"></i>
-            <h4>{{ block.title }}</h4>
+            <i class="fa {{ block.block.icon }}"></i>
+            <h4>{{ block.block.title }}</h4>
             <p class="text">
-                {{ block.body }}
+                {{ block.block.body }}
             </p>
         </div>
         {% endfor %}

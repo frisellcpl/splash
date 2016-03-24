@@ -42,9 +42,47 @@ class Page(models.Model):
     text_color = models.CharField(max_length=8, default='#4C4C4C')
     secondary_text_color = models.CharField(max_length=8, default='#FFFFFF')
 
-    image_blocks = models.ManyToManyField(ImageBlock)
-    simple_blocks = models.ManyToManyField(SimpleBlock)
-    icon_blocks = models.ManyToManyField(IconBlock, related_name='icon_blocks')
+    image_blocks = models.ManyToManyField(
+        ImageBlock,
+        through='PageImageBlock',
+        related_name='image_blocks')
+
+    simple_blocks = models.ManyToManyField(
+        SimpleBlock,
+        through='PageSimpleBlock',
+        related_name='simple_blocks')
+
+    icon_blocks = models.ManyToManyField(
+        IconBlock,
+        through='PageIconBlock',
+        related_name='icon_blocks')
 
     def __str__(self):
         return self.name
+
+
+class PageImageBlock(models.Model):
+    block = models.ForeignKey(ImageBlock)
+    page = models.ForeignKey(Page)
+    order = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ('order',)
+
+
+class PageSimpleBlock(models.Model):
+    block = models.ForeignKey(SimpleBlock)
+    page = models.ForeignKey(Page)
+    order = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ('order',)
+
+
+class PageIconBlock(models.Model):
+    block = models.ForeignKey(IconBlock)
+    page = models.ForeignKey(Page)
+    order = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ('order',)
