@@ -97,10 +97,6 @@ header {
   }
 }
 
-.main-content {
-  @include j-center($max_width: 1920px, $pad: 0);
-}
-
 .container {
   @include j-center($max_width: 960px, $pad: 30px);
 }
