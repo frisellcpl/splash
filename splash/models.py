@@ -42,6 +42,8 @@ class Page(models.Model):
     text_color = models.CharField(max_length=8, default='#4C4C4C')
     secondary_text_color = models.CharField(max_length=8, default='#FFFFFF')
 
+    ga = models.CharField(max_length=16, null=True, blank=True)
+
     image_blocks = models.ManyToManyField(
         ImageBlock,
         through='PageImageBlock',
