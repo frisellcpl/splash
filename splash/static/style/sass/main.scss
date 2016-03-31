@@ -207,7 +207,13 @@ footer {
     @include j-column(1/3);
   }
 
-  a {
+  a,
+  a:visited,
+  a:hover {
     color: #FFF;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }

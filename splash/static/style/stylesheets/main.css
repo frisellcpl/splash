@@ -336,6 +336,12 @@ footer .metadata:last-child {
   margin-right: 0;
 }
 /* line 210, ../sass/main.scss */
-footer a {
+footer a,
+footer a:visited,
+footer a:hover {
   color: #FFF;
+}
+/* line 216, ../sass/main.scss */
+footer a:hover {
+  text-decoration: underline;
 }
