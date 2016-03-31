@@ -126,15 +126,23 @@ ul li:not(li:last-child) {
 }
 
 /* line 57, ../sass/main.scss */
+a,
+a:visited,
+a:hover {
+  color: #4c4c4c;
+  text-decoration: none;
+}
+
+/* line 64, ../sass/main.scss */
 .list {
   margin: 30px 0;
 }
-/* line 60, ../sass/main.scss */
+/* line 67, ../sass/main.scss */
 .list .divider {
   font-style: italic;
 }
 
-/* line 65, ../sass/main.scss */
+/* line 72, ../sass/main.scss */
 .caption {
   color: #FFF;
   position: absolute;
@@ -145,32 +153,32 @@ ul li:not(li:last-child) {
   text-align: center;
 }
 
-/* line 71, ../sass/main.scss */
+/* line 78, ../sass/main.scss */
 .quote {
   font-size: 1.5em;
   margin-top: 1.4em;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* line 77, ../sass/main.scss */
+/* line 84, ../sass/main.scss */
 p {
   letter-spacing: 0.01em;
   margin-bottom: 0.6em;
 }
 
-/* line 82, ../sass/main.scss */
+/* line 89, ../sass/main.scss */
 header {
   position: relative;
   height: 400px;
   width: 100%;
   background-color: #595299;
 }
-/* line 88, ../sass/main.scss */
+/* line 95, ../sass/main.scss */
 header .quote {
   max-width: 600px;
 }
 
-/* line 93, ../sass/main.scss */
+/* line 100, ../sass/main.scss */
 .main-content {
   width: auto;
   max-width: 1920px;
@@ -182,7 +190,7 @@ header .quote {
   padding-right: 0;
 }
 
-/* line 97, ../sass/main.scss */
+/* line 104, ../sass/main.scss */
 .container {
   width: auto;
   max-width: 960px;
@@ -194,7 +202,7 @@ header .quote {
   padding-right: 30px;
 }
 
-/* line 102, ../sass/main.scss */
+/* line 109, ../sass/main.scss */
 .grid .cell {
   float: left;
   clear: none;
@@ -218,31 +226,31 @@ header .quote {
 .grid .cell:nth-of-type(2n + 1) {
   clear: both;
 }
-/* line 107, ../sass/main.scss */
+/* line 114, ../sass/main.scss */
 .grid i {
   font-size: 2em;
   margin-bottom: 15px;
 }
-/* line 112, ../sass/main.scss */
+/* line 119, ../sass/main.scss */
 .grid:after {
   clear: both;
   content: "";
   display: block;
 }
 
-/* line 119, ../sass/main.scss */
+/* line 126, ../sass/main.scss */
 .what {
   padding: 160px 0;
 }
-/* line 122, ../sass/main.scss */
+/* line 129, ../sass/main.scss */
 .what .block {
   display: table;
 }
-/* line 125, ../sass/main.scss */
+/* line 132, ../sass/main.scss */
 .what .block:not(:last-child) {
   margin-bottom: 120px;
 }
-/* line 129, ../sass/main.scss */
+/* line 136, ../sass/main.scss */
 .what .block .image {
   display: table-cell;
   vertical-align: middle;
@@ -251,24 +259,24 @@ header .quote {
   font-size: 0.95em;
   width: 60%;
 }
-/* line 137, ../sass/main.scss */
+/* line 144, ../sass/main.scss */
 .what .block .image.right {
   padding: 10px 0 0 60px;
 }
-/* line 142, ../sass/main.scss */
+/* line 149, ../sass/main.scss */
 .what .block .text {
   width: 40%;
   display: table-cell;
   vertical-align: middle;
 }
-/* line 148, ../sass/main.scss */
+/* line 155, ../sass/main.scss */
 .what .block:after {
   display: block;
   content: "";
   clear: both;
 }
 
-/* line 156, ../sass/main.scss */
+/* line 163, ../sass/main.scss */
 .editor pre code {
   color: #4c4c4c;
   background: #FFF;
@@ -277,30 +285,57 @@ header .quote {
   padding: 30px;
 }
 
-/* line 164, ../sass/main.scss */
+/* line 171, ../sass/main.scss */
 .why {
   width: 100%;
   background-color: #595299;
   color: #FFF;
   padding: 20px 0 100px;
 }
-/* line 170, ../sass/main.scss */
+/* line 177, ../sass/main.scss */
 .why .quote {
   padding: 45px 100px 15px;
   box-sizing: border-box;
   text-align: center;
   font-size: 1.8em;
 }
-/* line 177, ../sass/main.scss */
+/* line 184, ../sass/main.scss */
 .why .grid .cell {
   font-size: 0.95em;
 }
 
-/* line 182, ../sass/main.scss */
+/* line 189, ../sass/main.scss */
 .how {
   padding: 80px 0 160px;
 }
-/* line 185, ../sass/main.scss */
+/* line 192, ../sass/main.scss */
 .how .grid {
   text-align: center;
+}
+
+/* line 197, ../sass/main.scss */
+footer {
+  background-color: #595299;
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+/* line 202, ../sass/main.scss */
+footer .container {
+  text-align: center;
+}
+/* line 206, ../sass/main.scss */
+footer .metadata {
+  float: left;
+  clear: none;
+  width: 31.33333%;
+  margin-left: 0;
+  margin-right: 3%;
+}
+/* line 51, ../sass/jeet/_grid.scss */
+footer .metadata:last-child {
+  margin-right: 0;
+}
+/* line 210, ../sass/main.scss */
+footer a {
+  color: #FFF;
 }
